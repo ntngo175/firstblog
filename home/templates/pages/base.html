@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'csss/main.css' %}" type="text/css">
+    <title>{% block title %}{% endblock  %}</title>
+</head>
+<body>
+    <div class="container-fluid" style='min-height:95%'>
+        {% comment %} <div class="col-sm-2" style="background-color: rgb(127, 237, 252)">
+            <center><img src="{% static 'images/anh.jpg' %}" class="responsive-img" style="max-height:150px"/></center>
+        </div> {% endcomment %}
+        <div class="row">
+            {% comment %} <div class="col-sm-2" style="background-color: rgb(127, 237, 252)">
+                <center><img src="{% static 'images/anh.jpg' %}" class="responsive-img" style="max-height:150px"/></center>
+            </div>  {% endcomment %}
+            <div class="col">
+                <center><h1>HELLO, I'M NGÔ THÀNH NHƠN,<br>
+                    A PYTHON DEVELOPER
+                </h1></center>
+                {% comment %} <center><h1>A PYTHON DEVELOPER</h1></center> {% endcomment %}
+                {% comment %} <center><h1></h1></center> {% endcomment %}
+            </div>     
+        </div>
+        <br>
+        <div class='row'>
+            <div class='col-sm-2'>
+                <div class='bs-sliderbar' style='background-color: white'>
+                    <nav class='nav flex-column'>
+                        <a class='nav-link' color:'white' href='/'>Information</a>
+                        <a class='nav-link' href='/blog'>Blog</a>
+                        <a class='nav-link' href='/contact'>Contact</a>
+                    </nav>
+                </div>
+            </div>
+            <div class='col-sm-10'>
+                <div class='container-fluid'>
+                    {% block content %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div> 
+    <footer>
+        <div class='container-fluid'>
+            <a href='https://www.facebook.com/ngo.nhon.96/'>Facebook</a>|<a href='https://www.instagram.com/ntngo_17/'>Instagram</a>|<a href='http://www.google.com'>Google</a>|
+    </footer> 
+</body>
+</html>
